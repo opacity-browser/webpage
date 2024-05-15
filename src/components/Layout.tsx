@@ -48,7 +48,7 @@ export default () => {
 const $area = styled.div`
   width: 100%;
   height: 100%;
-  min-width: 1000px;
+  min-width: 1400px;
 `
 
 const $visual = styled.div`
@@ -167,6 +167,7 @@ const $visualBg = styled.div`
   height: 100%;
   width: 100%;
   min-height: 800px;
+  min-width: 1400px;
 
   &::before {
     content: "";

@@ -52,7 +52,7 @@ const $container = styled.div`
   padding: 0 20px;
   position: relative;
   z-index: 1;
-  padding-bottom: 10%;
+  padding-bottom: 7%;
 `
 
 const $left = styled.div`
