@@ -69,10 +69,10 @@ const $featureList = styled.div`
       }
       p {
         font-size: 20px;
-        line-height: 26px;
+        line-height: 24px;
         span {
           color: #aeaeae;
-          font-size: 18px;
+          font-size: 16px;
         }
       }
 
