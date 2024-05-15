@@ -221,6 +221,7 @@ const $visualBg = styled.div`
     width: 35%;
     background: linear-gradient(to top left, #222, #555);
     border-bottom-left-radius: 18px;
+    height: calc(100vh + 20px);
   }
 
   @media (max-width: 1400px) {
