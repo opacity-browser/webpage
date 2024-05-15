@@ -14,15 +14,16 @@ export default () => {
 
 const $area = styled.div`
   height: 160px;
-  // background: linear-gradient(to top left, #222, #444);
   background: #f5f5f5;
   display: flex;
   align-items: center;
+  @media (max-width: 1400px) {
+    height: 120px;
+  }
 `
 
 const $container = styled.div`
   width: 1400px;
-  // height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -34,5 +35,9 @@ const $container = styled.div`
   p {
     font-size: 14px;
     color: #999;
+  }
+
+  @media (max-width: 1400px) {
+    width: 1200px;
   }
 `

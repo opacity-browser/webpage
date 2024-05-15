@@ -48,7 +48,10 @@ export default () => {
 const $area = styled.div`
   width: 100%;
   height: 100%;
-  min-width: 1400px;
+
+  @media (max-width: 1400px) {
+    min-width: 1200px;
+  }
 `
 
 const $visual = styled.div`
@@ -65,6 +68,10 @@ const $container = styled.div`
   padding: 0 20px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 1400px) {
+    width: 1200px;
+  }
 `
 
 const $mainText = styled.div`
@@ -91,6 +98,22 @@ const $mainText = styled.div`
     padding: 0 2px;
     color: #999;
     margin-bottom: 40px;
+  }
+
+  @media (max-width: 1400px) {
+    svg {
+      width: 45px;
+    }
+    h1 { 
+      font-size: 46px;
+      line-height: 54px;
+      margin-bottom: 20px;
+    }
+
+    & > p {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
   }
 `
 
@@ -124,6 +147,12 @@ const $buttonBox = styled.div`
     // &:hover {
     //   opacity: 0.6;
     // }
+  }
+
+  @media (max-width: 1400px) {
+    button {
+      padding: 12px 16px;
+    }
   }
 `
 
@@ -159,6 +188,19 @@ const $imageBox = styled.div`
     width: 640px;
     height: auto;
   }
+
+  @media (max-width: 1400px) {
+    .darkmode {
+      margin: -25px 0 0 -25px;
+    }
+    .lightmode {
+      position: absolute;
+      margin: 25px 0 0 25px;
+    }
+    img {
+      width: 540px;
+    }
+  }
 `
 
 const $visualBg = styled.div`
@@ -167,7 +209,6 @@ const $visualBg = styled.div`
   height: 100%;
   width: 100%;
   min-height: 800px;
-  min-width: 1400px;
 
   &::before {
     content: "";
@@ -180,5 +221,9 @@ const $visualBg = styled.div`
     width: 35%;
     background: linear-gradient(to top left, #222, #555);
     border-bottom-left-radius: 18px;
+  }
+
+  @media (max-width: 1400px) {
+    min-width: 1200px;
   }
 `

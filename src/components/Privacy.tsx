@@ -49,6 +49,9 @@ const $area = styled.div`
   height: 1000px;
   background: #f5f5f5;
   display: flex;
+  @media (max-width: 1400px) {
+    height: 900px;
+  }
 `
 
 const $container = styled.div`
@@ -67,8 +70,6 @@ const $container = styled.div`
       &:not(:first-of-type) {
         margin-top: 40px;
       }
-      // padding: 5px 0 2px 20px;
-      // border-left: 6px solid #333;
       svg {
         display: block;
         width: 40px;
@@ -76,15 +77,12 @@ const $container = styled.div`
         margin-bottom: 20px;
       }
       h2 {
-        // display: flex;
-        // align-items: center;
         font-size: 32px;
         line-height: 32px;
         margin-bottom: 10px;
         color: #222;
         span {
           display: inline-block;
-          // margin-left: 20px;
         }
       }
       p {
@@ -107,6 +105,33 @@ const $container = styled.div`
           height: 8px;
           background: #333;
           opacity: 0.1;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1400px) {
+    width: 1200px;
+    padding-top: 6%;
+    ul {
+      li {
+        svg {
+          width: 36px;
+          margin-bottom: 18px;
+        }
+        h2 {
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 17px;
+          line-height: 22px;
+        }
+        a {
+          &::before {
+            height: 7px;
+          }
         }
       }
     }

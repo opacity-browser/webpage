@@ -122,4 +122,8 @@ const $container = styled.div`
       display: inline-block;
     }
   }
+
+  @media (max-width: 1400px) {
+    width: 1200px;
+  }
 `

@@ -53,6 +53,11 @@ const $container = styled.div`
   position: relative;
   z-index: 1;
   padding-bottom: 7%;
+
+  @media (max-width: 1400px) {
+    width: 1200px;
+    padding-bottom: 8%;
+  }
 `
 
 const $left = styled.div`
@@ -85,6 +90,17 @@ const $contentBox = styled.div`
   p {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  @media (max-width: 1400px) {
+    h2 {
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 20px;
+    }
   }
 `
 
