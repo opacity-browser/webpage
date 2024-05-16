@@ -1,9 +1,12 @@
 import styled from '@emotion/styled'
+import { useTranslation } from 'react-i18next'
 import { ServerIcon } from '../icons/ServerIcon'
 import { LoadingIcon } from '../icons/LoadingIcon'
 import { GithubIcon } from '../icons/GithubIcon'
 
 export default () => {
+  const { t } = useTranslation()
+
   return (
     <$area>
       <$container>
@@ -11,30 +14,29 @@ export default () => {
           <li>
             <h2>
               <ServerIcon />
-              <span>We do not have a separate server for the service.</span>
+              <span>{t('We do not have a separate server for the service.')}</span>
             </h2>
             <p>
-              Therefore, we do not collect any user information, allowing you to use it with confidence.<br />
-              <span>(To ensure a good user experience, we store information about your browsing history and site history on your computer.)</span>
+              {t('Therefore, we are unable to collect any information. Feel free to use our service with peace of mind.')}<br />
+              <span>({t('To ensure a good user experience, we store information about your browsing history and site history on your computer.')})</span>
             </p>
           </li>
           <li>
             <h2>
               <LoadingIcon />
-              <span>Your search and visit history is only kept for 7 days.</span>
+              <span>{t('Your search and visit history is only kept for 7 days.')}</span>
             </h2>
             <p>
-              By default, your browsing and search history is deleted after 7 days.<br />
-              <span>(The period can be changed through settings.)</span>
+              {t('By default, it is deleted after 7 days, and you can change the retention period through settings.')}<br />
             </p>
           </li>
           <li>
             <h2>
               <GithubIcon />
-              <span>Our browser is developed as a 100% open-source project.</span>
+              <span>{t('Our browser is developed as a open-source project.')}</span>
             </h2>
             <p>
-            As an open-source project, all code can be viewed on GitHub, and you are welcome to participate in the development.<br />
+            {t('As an open-source project, all code can be viewed on GitHub, and you are welcome to participate in the development.')}<br />
               <a href="https://github.com/opacity-browser" target="_blank">https://github.com/opacity-browser</a>
             </p>
           </li>
@@ -81,6 +83,7 @@ const $container = styled.div`
         line-height: 32px;
         margin-bottom: 10px;
         color: #222;
+        font-weight: bold;
         span {
           display: inline-block;
         }

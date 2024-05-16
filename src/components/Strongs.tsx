@@ -1,13 +1,16 @@
 import styled from '@emotion/styled'
+import { useTranslation } from 'react-i18next'
 
 export default () => {
+  const { t } = useTranslation()
+
   return (
     <$area>
       <$container>
         <$left>
           <$contentBox>
-            <h2>Tracker Blocking</h2>
-            <p>Trackers can be blocked at three levels.</p>
+            <h2>{t('Tracker Blocking')}</h2>
+            <p>{t('Trackers can be blocked at three levels.')}</p>
             <figure>
               <img src="/imgs/certificate.png" alt="" />
             </figure>
@@ -15,8 +18,8 @@ export default () => {
         </$left>
         <$center>
           <$contentBox>
-            <h2>Cleanup</h2>
-            <p>All saved user data can be deleted in settings.</p>
+            <h2>{t('Cleanup')}</h2>
+            <p>{t('All saved user data can be deleted in settings.')}</p>
             <figure>
               <img src="/imgs/settings.png" alt="" />
             </figure>
@@ -24,8 +27,8 @@ export default () => {
         </$center>
         <$right>
           <$contentBox>
-            <h2>Contact Us</h2>
-            <p>If you have any questions, please contact us.</p>
+            <h2>{t('Contact Us')}</h2>
+            <p>{t('If you have any questions, please contact us.')}</p>
             <figure>
               <img src="/imgs/contact.png" alt="" />
             </figure>
@@ -83,9 +86,11 @@ const $contentBox = styled.div`
   border-radius: 6px;
   padding: 30px;
   color: #fff;
+  word-break: keep-all;
   h2 {
     font-size: 28px;
     margin-bottom: 15px;
+    font-weight: bold;
   }
   p {
     font-size: 18px;

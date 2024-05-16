@@ -1,7 +1,10 @@
 import styled from '@emotion/styled'
+import { useTranslation } from 'react-i18next'
 import { MapIcon } from '../icons/MapIcon'
 
 export default () => {
+  const { t } = useTranslation()
+
   return (
     <$area>
       <$container>
@@ -13,36 +16,28 @@ export default () => {
         <ul>
           <li>
             <p>
-              Tracker blocking updates<br />
-              <span>The current tracker blocking feature is an early version and has many shortcomings.</span>
+              {t('Tracker blocking updates')}<br />
+              <span>({t('The current tracker blocking feature is an early version and has many shortcomings.')})</span>
             </p>
           </li>
           <li>
             <p>
-              Add bulk deletion function for bookmarks
+              {t('Add search function to search history and visit history')}
             </p>
           </li>
           <li>
             <p>
-              Add search function to search history and visit history
+              {t('Add AD blocking')}
             </p>
           </li>
           <li>
             <p>
-              Add favicon in visit history list view
+              {t('Implementing the getUserMedia function')}<br />
+              <span>({t('We currently do not provide web camera and microphone features.')})</span>
             </p>
           </li>
           <li>
-            <p>Add AD blocking</p>
-          </li>
-          <li>
-            <p>
-              Implementing the getUserMedia function<br />
-              <span>We currently do not provide web camera and microphone features.</span>
-            </p>
-          </li>
-          <li>
-            <p>Add to view download history</p>
+            <p>{t('Add download history view')}</p>
           </li>
         </ul>
         </$featureList>
@@ -118,6 +113,7 @@ const $container = styled.div`
     line-height: 32px;
     margin-bottom: 15px;
     color: #222;
+    font-weight: bold;
     span {
       display: inline-block;
     }

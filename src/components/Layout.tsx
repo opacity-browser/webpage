@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { useTranslation } from 'react-i18next'
 import { Logo } from '../icons/Logo'
 import { AppleLogo } from '../icons/AppleLogo'
 import Strongs from './Strongs'
@@ -7,6 +8,8 @@ import Feature from './Feature'
 import Footer from './Footer'
 
 export default () => {
+  const { t } = useTranslation()
+
   return (
     <$area>
       <$visual>
@@ -14,13 +17,13 @@ export default () => {
         <$container>
           <$mainText>
             <Logo />
-            <h1>The Opacity Browser<br />demands nothing from you.</h1>
-            <p>We do not collect any user information whatsoever.</p>
+            <h1>{t('The Opacity Browser\ndemands nothing from you.')}</h1>
+            <p>{t('We do not collect any user information whatsoever.')}</p>
             <$buttonBox>
               <button>
                 <AppleLogo />
-                {/* Download for MacOS */}
-                Currently under review
+                {/* {t('Download for MacOS')} */}
+                {t('Currently under review')}
               </button>
               {/* <$version><p><span>v</span>1.0.0</p></$version> */}
             </$buttonBox>
@@ -91,6 +94,7 @@ const $mainText = styled.div`
     line-height: 62px;
     color: #000;
     margin-bottom: 25px;
+    white-space: pre-line;
   }
 
   & > p {
@@ -125,7 +129,7 @@ const $buttonBox = styled.div`
     display: flex;
     align-items: center;
     border: 0;
-    padding: 14px 18px;
+    padding: 14px 20px 14px 18px;
     background: #000;
     color: #fff;
     border-radius: 8px;
@@ -151,7 +155,7 @@ const $buttonBox = styled.div`
 
   @media (max-width: 1400px) {
     button {
-      padding: 12px 16px;
+      padding: 12px 18px 12px 16px;
     }
   }
 `
