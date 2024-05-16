@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link id="favicon" rel="icon" type="image/png" sizes="64x64" href="./imgs/favicon-light.png">
+    <script src="./proxima-nova.js"></script>
+    <title>Privacy Policy</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        const favicon = document.getElementById('favicon')
+        const updateFavicon = () => {
+          if (darkModeMediaQuery.matches) {
+            favicon.href = './imgs/favicon-dark.png'
+          } else {
+            favicon.href = './imgs/favicon-light.png'
+          }
+        }
+        darkModeMediaQuery.addEventListener('change', updateFavicon)
+        updateFavicon()
+      });
+    </script>
+    <style>
+      body {
+          font-family: 'ProximaNova-Regular', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+          line-height: 1.6;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+          padding: 0 20px;
+      }
+      .container {
+          max-width: 700px;
+          margin: 50px auto;
+          padding: 20px 40px;
+          background: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+          text-align: center;
+          color: #333;
+      }
+      h2 {
+          color: #333;
+      }
+      p {
+          color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <h2>Introduction</h2>
+      <p>
+          At Opacity Browser, we are committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information when you use our application.
+      </p>
+      <h2>Information Collection and Use</h2>
+      <p>
+          We do not collect any personal information from our users. We respect your privacy and ensure that no personal data is gathered, stored, or shared by our application.
+      </p>
+      <h2>Log Data</h2>
+      <p>
+          While using our application, no log data is collected from your device. We do not track your activities or gather any information that could be used to identify you.
+      </p>
+      <h2>Cookies</h2>
+      <p>
+          Our application does not use cookies or similar tracking technologies to collect or store any information.
+      </p>
+      <h2>Third-Party Services</h2>
+      <p>
+          Opacity Browser does not share any user information with third-party services since no personal information is collected in the first place.
+      </p>
+      <h2>Security</h2>
+      <p>
+          We value your trust in using our application and strive to ensure that your experience is safe and secure. Since we do not collect any personal information, there is no risk of unauthorized access to your data.
+      </p>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>
+          We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted.
+      </p>
+      <h2>Contact Us</h2>
+      <p>
+          If you have any questions or suggestions about our Privacy Policy,<br />
+          do not hesitate to contact us at <a href="mailto:me@falsy.me">me@falsy.me</a>.
+      </p>
+    </div>
+  </body>
+</html>
