@@ -20,12 +20,13 @@ export default () => {
             <h1>{t('The Opacity Browser\ndemands nothing from you.')}</h1>
             <p>{t('We do not collect any user information whatsoever.')}</p>
             <$buttonBox>
-              <button>
-                <AppleLogo />
-                {/* {t('Download for MacOS')} */}
-                {t('Currently under review')}
-              </button>
-              {/* <$version><p><span>v</span>1.0.0</p></$version> */}
+              <a href='https://apps.apple.com/us/app/opacity-web-browser/id6502774960' target='_blank'>
+                <button>
+                  <AppleLogo />
+                  {t('Download for MacOS')}
+                </button>
+              </a>
+              <$version><p><span>v</span>1.0.0</p></$version>
             </$buttonBox>
           </$mainText>
           <$mainImage>
@@ -145,12 +146,11 @@ const $buttonBox = styled.div`
       margin-top: -2px;
     }
 
-    opacity: 0.2;
-    // opacity: 1;
-    // transition: 0.3s opacity;
-    // &:hover {
-    //   opacity: 0.6;
-    // }
+    opacity: 1;
+    transition: 0.3s opacity;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   @media (max-width: 1400px) {

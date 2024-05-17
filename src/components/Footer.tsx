@@ -6,9 +6,9 @@ export default () => {
   const { i18n } = useTranslation()
   const [ currentLang, setLang ] = useState(i18n.language)
 
-  const handleChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setLang(e.target.value)
-  }
+  // const handleChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setLang(e.target.value)
+  // }
 
   useEffect(() => {
     i18n.changeLanguage(currentLang)
@@ -17,7 +17,7 @@ export default () => {
   return (
     <$area>
       <$container>
-        <p>© 2024 Opacity Browser.</p>
+        <p>© 2024 <a href="https://falsy.me" target="_blank">falsy</a></p>
         {/* <div>
           <select onChange={handleChangeLang}>
             <option value="en">
@@ -49,10 +49,10 @@ const $container = styled.div`
   padding: 0 20px;
   position: relative;
   z-index: 1;
-  justify-content: center;
+  // justify-content: center;
 
   p {
-    font-size: 14px;
+    font-size: 13px;
     color: #999;
   }
 
