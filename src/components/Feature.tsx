@@ -29,6 +29,11 @@ export default () => {
             <p>
               {t('Add AD blocking')}
             </p>
+            <ul>
+              <li><input type='checkbox' checked disabled={true} />AdSense</li>
+              <li><input type='checkbox' checked disabled={true} />YouTube</li>
+              <li><input type='checkbox' disabled={true} />Other</li>
+            </ul>
           </li>
           <li>
             <p>
@@ -62,6 +67,7 @@ const $featureList = styled.div`
       &:not(:first-of-type) {
         margin-top: 10px;
       }
+
       p {
         font-size: 20px;
         line-height: 24px;
@@ -83,6 +89,22 @@ const $featureList = styled.div`
           height: 8px;
           background: #333;
           opacity: 0.1;
+        }
+      }
+
+      ul {
+        margin-bottom: 15px;
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          list-style: none;
+          &:first-of-type {
+            margin-top: 10px;
+          }
+          input {
+            margin: 0 5px 0 0;
+          }
         }
       }
     }

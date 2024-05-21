@@ -26,7 +26,6 @@ export default () => {
                   {t('Download for MacOS')}
                 </button>
               </a>
-              <$version><p><span>v</span>1.0.0</p></$version>
             </$buttonBox>
           </$mainText>
           <$mainImage>
@@ -156,18 +155,6 @@ const $buttonBox = styled.div`
   @media (max-width: 1400px) {
     button {
       padding: 12px 18px 12px 16px;
-    }
-  }
-`
-
-const $version = styled.div`
-  font-size: 14px;
-  margin: 1px 0 0 10px;
-  color: #999;
-  p {
-    span {
-      display: inline-block;
-      margin-right: 2px;
     }
   }
 `
