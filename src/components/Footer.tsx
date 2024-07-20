@@ -1,10 +1,10 @@
-import styled from '@emotion/styled'
-import { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import styled from "@emotion/styled"
+import { useEffect, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export default () => {
   const { i18n } = useTranslation()
-  const [ currentLang, setLang ] = useState(i18n.language)
+  const [currentLang, setLang] = useState(i18n.language)
 
   // const handleChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
   //   setLang(e.target.value)
@@ -17,7 +17,12 @@ export default () => {
   return (
     <$area>
       <$container>
-        <p>© 2024 <a href="https://falsy.me" target="_blank">falsy</a></p>
+        <p>
+          © 2024{" "}
+          <a href="https://falsy.me" target="_blank">
+            Falsy
+          </a>
+        </p>
         {/* <div>
           <select onChange={handleChangeLang}>
             <option value="en">
@@ -30,15 +35,12 @@ export default () => {
   )
 }
 
-
 const $area = styled.div`
-  height: 160px;
+  height: 120px;
   background: #f5f5f5;
   display: flex;
   align-items: center;
-  @media (max-width: 1400px) {
-    height: 120px;
-  }
+  border-bottom: 10px solid #222;
 `
 
 const $container = styled.div`

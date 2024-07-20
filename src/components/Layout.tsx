@@ -1,11 +1,12 @@
-import styled from '@emotion/styled'
-import { useTranslation } from 'react-i18next'
-import { Logo } from '../icons/Logo'
-import { AppleLogo } from '../icons/AppleLogo'
-import Strongs from './Strongs'
-import Privacy from './Privacy'
-import Feature from './Feature'
-import Footer from './Footer'
+import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
+import { Logo } from "../icons/Logo"
+import { AppleLogo } from "../icons/AppleLogo"
+// import Strongs from "./Strongs"
+import Privacy from "./Privacy"
+// import Feature from "./Feature"
+import Footer from "./Footer"
+import { GithubIcon } from "../icons/GithubIcon"
 
 export default () => {
   const { t } = useTranslation()
@@ -17,13 +18,26 @@ export default () => {
         <$container>
           <$mainText>
             <Logo />
-            <h1>{t('The Opacity Browser\ndemands nothing from you.')}</h1>
-            <p>{t('We do not collect any user information whatsoever.')}</p>
+            <h1>{t("The Opacity Browser \ndemands nothing from you.")}</h1>
+            <p>
+              {t(
+                "We operate as a non-profit organization, \nprioritizing privacy and focusing solely on providing a smooth \nand convenient web browsing experience."
+              )}
+            </p>
             <$buttonBox>
-              <a href='https://apps.apple.com/us/app/opacity-web-browser/id6502774960' target='_blank'>
+              <a
+                href="https://apps.apple.com/us/app/opacity-web-browser/id6502774960"
+                target="_blank"
+              >
                 <button>
                   <AppleLogo />
-                  {t('Download for MacOS')}
+                  {t("Download for MacOS")}
+                </button>
+              </a>
+              <a href="https://github.com/opacity-browser" target="_blank">
+                <button>
+                  <GithubIcon />
+                  GitHub
                 </button>
               </a>
             </$buttonBox>
@@ -41,8 +55,8 @@ export default () => {
         </$container>
       </$visual>
       <Privacy />
-      <Strongs />
-      <Feature />
+      {/* <Strongs /> */}
+      {/* <Feature /> */}
       <Footer />
     </$area>
   )
@@ -79,15 +93,14 @@ const $container = styled.div`
 
 const $mainText = styled.div`
   width: 50%;
-  padding-bottom: 5%;
 
-  svg {
-    width: 50px;
+  & > svg {
+    width: 54px;
     height: auto;
     filter: invert(100%);
     margin-bottom: 20px;
   }
-  
+
   h1 {
     font-weight: bold;
     font-size: 52px;
@@ -98,24 +111,28 @@ const $mainText = styled.div`
   }
 
   & > p {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 26px;
     padding: 0 2px;
     color: #999;
     margin-bottom: 40px;
+    font-weight: 500;
+    white-space: pre-line;
   }
 
   @media (max-width: 1400px) {
     svg {
       width: 45px;
     }
-    h1 { 
+    h1 {
       font-size: 46px;
       line-height: 54px;
       margin-bottom: 20px;
     }
 
     & > p {
-      font-size: 20px;
+      font-size: 18px;
+      line-height: 24px;
       margin-bottom: 35px;
     }
   }
@@ -125,30 +142,51 @@ const $buttonBox = styled.div`
   display: flex;
   align-items: center;
 
-  button {
-    display: flex;
-    align-items: center;
-    border: 0;
-    padding: 14px 20px 14px 18px;
-    background: #000;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    img {
-      line-height: 0;
-      display: inline-block;
-      margin-right: 10px;
-      width: 16px;
-      height: auto;
-      filter: invert(100%);
-      margin-top: -2px;
+  a {
+    button {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px 10px 18px;
+      border: 1px solid rgb(250, 250, 250);
+      height: 46px;
+      background: #000;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      img {
+        line-height: 0;
+        display: inline-block;
+        margin-right: 10px;
+        width: 16px;
+        height: auto;
+        filter: invert(100%);
+        margin-top: -2px;
+      }
+
+      transition: 0.3s all;
+      &:hover {
+        background: #555;
+      }
     }
 
-    opacity: 1;
-    transition: 0.3s opacity;
-    &:hover {
-      opacity: 0.6;
+    & + a {
+      margin-left: 10px;
+      button {
+        padding: 10px 22px 10px 18px;
+        background: #fff;
+        color: #000;
+        border: 1px solid #eaeaea;
+        &:hover {
+          background: #f9f9f9;
+          color: #888;
+        }
+        & > svg {
+          width: 19px;
+          height: auto;
+          margin-right: 8px;
+        }
+      }
     }
   }
 
@@ -176,7 +214,7 @@ const $imageBox = styled.div`
     margin: 30px 0 0 30px;
   }
   img {
-    width: 640px;
+    width: 600px;
     height: auto;
   }
 
@@ -189,7 +227,7 @@ const $imageBox = styled.div`
       margin: 25px 0 0 25px;
     }
     img {
-      width: 540px;
+      width: 500px;
     }
   }
 `
@@ -210,9 +248,10 @@ const $visualBg = styled.div`
   &::after {
     content: "";
     width: 35%;
-    background: linear-gradient(to top left, #222, #555);
-    border-bottom-left-radius: 18px;
+    background: linear-gradient(to top left, #222, #3f3f3f);
+    border-bottom-left-radius: 6px;
     height: calc(100vh + 20px);
+    min-height: 800px;
   }
 
   @media (max-width: 1400px) {
