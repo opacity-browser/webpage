@@ -97,6 +97,7 @@ const $container = styled.div`
 
 const $mainText = styled.div`
   width: 55%;
+  margin-top: -70px;
 
   & > svg {
     width: 52px;
@@ -120,9 +121,9 @@ const $mainText = styled.div`
   & > p {
     font-size: 18px;
     line-height: 28px;
-    padding: 0 2px;
+    padding-left: 4px;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 500;
     white-space: pre-line;
   }
@@ -139,8 +140,9 @@ const $mainText = styled.div`
 
     & > p {
       font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 35px;
+      line-height: 25px;
+      margin-bottom: 25px;
+      padding-left: 3px;
     }
   }
 `
@@ -209,6 +211,7 @@ const $buttonBox = styled.div`
 
 const $mainImage = styled.div`
   width: 45%;
+  margin-top: -50px;
   display: flex;
   align-items: center;
   justify-content: center;
