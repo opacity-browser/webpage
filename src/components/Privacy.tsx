@@ -134,11 +134,14 @@ const $container = styled.div`
         stroke-width: 2;
       }
       h2 {
-        font-size: 30px;
-        line-height: 30px;
+        font-size: 32px;
+        line-height: 32px;
         margin-bottom: 8px;
         color: #222;
         font-weight: 500;
+        font-family: "Quicksand", "ProximaNova-Regular", "Apple SD Gothic Neo",
+          sans-serif;
+        // letter-spacing: -0.3px;
         span {
           display: inline-block;
         }
@@ -148,7 +151,7 @@ const $container = styled.div`
         line-height: 22px;
         span {
           font-size: 17px;
-          color: #aeaeae;
+          color: #888;
         }
       }
 
@@ -156,10 +159,10 @@ const $container = styled.div`
         display: inline-block;
         position: relative;
         font-size: 17px;
-        color: #aeaeae;
+        color: #888;
         transition: color 0.3s;
         &:hover {
-          color: #666;
+          color: #444;
         }
         &::before {
           content: "";

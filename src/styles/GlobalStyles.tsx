@@ -1,93 +1,179 @@
-import { Global, css } from '@emotion/react'
+import { Global, css } from "@emotion/react"
 
 export default () => {
   return (
-    <Global styles={css`
-      @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-      /* http://meyerweb.com/eric/tools/css/reset/ 
+    <Global
+      styles={css`
+        /* http://meyerweb.com/eric/tools/css/reset/ 
           v2.0 | 20110126
           License: none (public domain)
       */
-      
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed, 
-      figure, figcaption, footer, header, hgroup, 
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-      }
 
-      /* HTML5 display-role reset for older browsers */
-      article, aside, details, figcaption, figure, 
-      footer, header, hgroup, menu, nav, section {
-        display: block;
-      }
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+        }
 
-      body {
-        line-height: 1;
-      }
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+          display: block;
+        }
 
-      ol, ul {
-        list-style: none;
-      }
+        body {
+          line-height: 1;
+        }
 
-      blockquote, q {
-        quotes: none;
-      }
+        ol,
+        ul {
+          list-style: none;
+        }
 
-      blockquote:before, blockquote:after,
-      q:before, q:after {
-        content: '';
-        content: none;
-      }
-      
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-      }
+        blockquote,
+        q {
+          quotes: none;
+        }
 
-      /* end reset */
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+          content: "";
+          content: none;
+        }
 
-      * {
-        box-sizing: border-box;
-      }
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
 
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        color: #666;
-        font-family: 'ProximaNova-Regular', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-        background: rgb(250, 250, 250);
-      }
+        /* end reset */
 
-      #wrap {
-        height: 100%;
-      }
+        * {
+          box-sizing: border-box;
+        }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
 
-      figure {
-        line-height: 0;
-      }
+        body {
+          color: #666;
+          font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", sans-serif;
+          background: rgb(250, 250, 250);
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
 
-    `} />
+        #wrap {
+          height: 100%;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        figure {
+          line-height: 0;
+        }
+      `}
+    />
   )
 }

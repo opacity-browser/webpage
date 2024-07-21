@@ -96,7 +96,7 @@ const $container = styled.div`
 `
 
 const $mainText = styled.div`
-  width: 50%;
+  width: 55%;
 
   & > svg {
     width: 52px;
@@ -107,19 +107,21 @@ const $mainText = styled.div`
 
   h1 {
     font-weight: bold;
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 52px;
+    line-height: 60px;
     color: #000;
     margin-bottom: 25px;
     white-space: pre-line;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
+    font-family: "Quicksand", "ProximaNova-Regular", "Apple SD Gothic Neo",
+      sans-serif;
   }
 
   & > p {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 28px;
     padding: 0 2px;
-    color: #999;
+    color: #666;
     margin-bottom: 40px;
     font-weight: 500;
     white-space: pre-line;
@@ -159,6 +161,9 @@ const $buttonBox = styled.div`
       border-radius: 8px;
       cursor: pointer;
       font-size: 15px;
+      font-family: "Quicksand", "ProximaNova-Regular", "Apple SD Gothic Neo",
+        sans-serif;
+      font-weight: 500;
       img {
         line-height: 0;
         display: inline-block;
@@ -203,7 +208,7 @@ const $buttonBox = styled.div`
 `
 
 const $mainImage = styled.div`
-  width: 50%;
+  width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,7 +216,7 @@ const $mainImage = styled.div`
 
 const $imageBox = styled.div`
   position: relative;
-  margin-top: -20px;
+  // margin-top: -20px;
   .darkmode {
     margin: -25px 0 0 -25px;
   }
