@@ -73,7 +73,11 @@ const $area = styled.div`
 
 const $visual = styled.div`
   height: 100%;
-  min-height: 800px;
+  min-height: 760px;
+
+  @media (max-width: 1400px) {
+    min-height: 600px;
+  }
 `
 
 const $container = styled.div`
@@ -95,23 +99,24 @@ const $mainText = styled.div`
   width: 50%;
 
   & > svg {
-    width: 54px;
+    width: 52px;
     height: auto;
     filter: invert(100%);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   h1 {
     font-weight: bold;
-    font-size: 52px;
-    line-height: 62px;
+    font-size: 56px;
+    line-height: 64px;
     color: #000;
     margin-bottom: 25px;
     white-space: pre-line;
+    letter-spacing: -0.5px;
   }
 
   & > p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     padding: 0 2px;
     color: #999;
@@ -206,28 +211,29 @@ const $mainImage = styled.div`
 
 const $imageBox = styled.div`
   position: relative;
+  margin-top: -20px;
   .darkmode {
-    margin: -30px 0 0 -30px;
+    margin: -25px 0 0 -25px;
   }
   .lightmode {
     position: absolute;
-    margin: 30px 0 0 30px;
+    margin: 25px 0 0 25px;
   }
   img {
-    width: 600px;
+    width: 560px;
     height: auto;
   }
 
   @media (max-width: 1400px) {
     .darkmode {
-      margin: -25px 0 0 -25px;
+      margin: -20px 0 0 -20px;
     }
     .lightmode {
       position: absolute;
-      margin: 25px 0 0 25px;
+      margin: 20px 0 0 20px;
     }
     img {
-      width: 500px;
+      width: 480px;
     }
   }
 `
@@ -251,7 +257,11 @@ const $visualBg = styled.div`
     background: linear-gradient(to top left, #222, #3f3f3f);
     border-bottom-left-radius: 6px;
     height: calc(100vh + 20px);
-    min-height: 800px;
+    min-height: 760px;
+
+    @media (max-width: 1400px) {
+      min-height: 600px;
+    }
   }
 
   @media (max-width: 1400px) {
