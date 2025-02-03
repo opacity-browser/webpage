@@ -18,7 +18,7 @@ export default () => {
     <$area>
       <$container>
         <p>
-          © 2024{" "}
+          © 2025{" "}
           <a href="https://falsy.me" target="_blank">
             Falsy
           </a>

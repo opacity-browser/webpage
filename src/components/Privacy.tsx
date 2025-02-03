@@ -128,7 +128,7 @@ const $container = styled.div`
       }
       svg {
         display: block;
-        width: 30px;
+        width: 32px;
         height: auto;
         margin-bottom: 12px;
         stroke-width: 2;
