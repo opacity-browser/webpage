@@ -155,7 +155,8 @@ export default () => {
 
         body {
           color: #666;
-          font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", sans-serif;
+          font-family: "Avenir", "ProximaNova-Regular", "Apple SD Gothic Neo",
+            sans-serif;
           background: rgb(250, 250, 250);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;

@@ -128,14 +128,14 @@ const $container = styled.div`
       }
       svg {
         display: block;
-        width: 36px;
+        width: 30px;
         height: auto;
         margin-bottom: 12px;
         stroke-width: 2;
       }
       h2 {
-        font-size: 32px;
-        line-height: 32px;
+        font-size: 26px;
+        line-height: 26px;
         margin-bottom: 8px;
         color: #222;
         font-weight: 500;
@@ -147,10 +147,10 @@ const $container = styled.div`
         }
       }
       p {
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         span {
-          font-size: 17px;
+          font-size: 15px;
           color: #888;
         }
       }
